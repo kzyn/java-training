@@ -20,4 +20,7 @@ public class User {
         return this.age;
     }
 
+    public void printUser() {
+        System.out.printf("名前: %s 年齢: %d\n", this.name, this.age);
+    }
 }

@@ -5,10 +5,10 @@ public class ThrowExercise {
     public static void main(String args[]) {
         try {
             User suziki = new User("鈴木", 20);
-            System.out.printf("名前: %s 年齢: %d\n", suziki.getName(), suziki.getAge());
+            suziki.printUser();
 
             User sato = new User("佐藤", -1);
-            System.out.printf("名前: %s 年齢: %d\n", sato.getName(), sato.getAge());
+            sato.printUser();
         } catch (InvalidAgeException e) {
             e.printStackTrace();
         }

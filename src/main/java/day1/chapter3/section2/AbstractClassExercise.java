@@ -4,10 +4,10 @@ public class AbstractClassExercise {
     static final String SAMPLE_FILE_NAME = "新規テキストファイル";
 
     public static void main(String args[]) {
-        AbstractFile a = new TextFile();
+        AbstractFile abstractFile = new TextFile();
 
-        a.setName(SAMPLE_FILE_NAME);
-        System.out.println(a.getName());
-        System.out.println(a.getFullName());
+        abstractFile.setName(SAMPLE_FILE_NAME);
+        System.out.println(abstractFile.getName());
+        System.out.println(abstractFile.getFullName());
     }
 }
