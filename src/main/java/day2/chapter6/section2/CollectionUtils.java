@@ -1,9 +1,6 @@
 package day2.chapter6.section2;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 import java.util.List;
-import java.util.Map;
 
 class CollectionUtils {
 

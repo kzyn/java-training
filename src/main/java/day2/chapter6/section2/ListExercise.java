@@ -10,14 +10,14 @@ public class ListExercise {
         List<String> arrayList = new ArrayList<>();
         List<String> linkedList = new LinkedList<>();
 
-        arrayList.add("arrayList1");
-        arrayList.add("arrayList2");
-        arrayList.add("arrayList3");
+        arrayList.add("arrayListの要素1");
+        arrayList.add("arrayListの要素2");
+        arrayList.add("arrayListの要素3");
         collectionUtils.printListElements(arrayList);
 
-        linkedList.add("linkedList1");
-        linkedList.add("linkedList2");
-        linkedList.add("linkedList3");
+        linkedList.add("linkedListの要素1");
+        linkedList.add("linkedListの要素2");
+        linkedList.add("linkedListの要素3");
         collectionUtils.printListElements(linkedList);
     }
 }
