@@ -60,8 +60,8 @@ class MainCommand implements Command {
         int index = 0;
         Map<Integer, Command> commandMap = new TreeMap<>();
         commandMap.put(index++, new ExitCommand());
-        commandMap.put(index++, new DisplayCommand());
         commandMap.put(index++, new AddCommand(content));
+        commandMap.put(index++, new DisplayCommand(content));
         return commandMap;
     }
 }

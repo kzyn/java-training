@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 class AddCommand implements Command {
 
-    static Content content;
+    private Content content;
 
     public AddCommand(Content content) {
         this.content = content;
