@@ -5,8 +5,8 @@ import java.util.List;
 class CollectionUtils {
 
     public void printListElements(List<String> list) {
-        for (String srt : list) {
-            System.out.println(srt);
+        for (String element : list) {
+            System.out.println(element);
         }
     }
 }

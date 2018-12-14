@@ -1,6 +1,7 @@
 package day2.chapter7.section1;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -21,4 +22,7 @@ class Content {
         return new ArrayList<>(lines);
     }
 
+    public void deleteLine() {
+        lines.clear();
+    }
 }

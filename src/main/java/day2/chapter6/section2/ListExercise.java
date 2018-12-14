@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ListExercise {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         CollectionUtils collectionUtils = new CollectionUtils();
         List<String> arrayList = new ArrayList<>();
         List<String> linkedList = new LinkedList<>();

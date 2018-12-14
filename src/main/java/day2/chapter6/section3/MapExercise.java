@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class MapExercise {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Map<Integer, String> hashMap = new HashMap<>();
         Map<Integer, String> treeMap = new TreeMap<>();
         CollectionUtils collectionUtils = new CollectionUtils();

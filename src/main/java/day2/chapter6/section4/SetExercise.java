@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 class SetExercise {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Set<String> hashSet = new HashSet<>();
         Set<String> treeSet = new TreeSet<>();
         CollectionUtils collectionUtils = new CollectionUtils();

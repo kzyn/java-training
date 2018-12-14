@@ -5,8 +5,8 @@ import java.util.Map;
 class CollectionUtils {
 
     public void printMapElements(Map<Integer, String> map) {
-        for (Integer key : map.keySet()) {
-            System.out.println(key + ":" + map.get(key));
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ":" + entry.getValue());
         }
     }
 }

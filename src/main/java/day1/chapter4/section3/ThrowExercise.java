@@ -2,7 +2,7 @@ package day1.chapter4.section3;
 
 public class ThrowExercise {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             User suziki = new User("鈴木", 20);
             suziki.printUser();

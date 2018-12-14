@@ -62,6 +62,7 @@ class MainCommand implements Command {
         commandMap.put(index++, new ExitCommand());
         commandMap.put(index++, new AddCommand(content));
         commandMap.put(index++, new DisplayCommand(content));
+        commandMap.put(index++, new DeleteCommand(content));
         return commandMap;
     }
 }
