@@ -3,22 +3,26 @@ package day3.chapter8.section1;
 import java.sql.*;
 
 class DatabaseAccess {
-    protected Connection connection;
+    private Connection connection;
 
-    private static final String url = "jdbc:h2:tcp://localhost/~/test";
-    private static final String user = "sa";
-    private static final String password = "";
-
-    DatabaseAccess() {
+    public void init(String url, String user, String password) {
         try {
-            connection = DriverManager.getConnection(url, user, password);
+            this.connection = DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void close() {
+        try {
+            this.connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public void selectAll() {
-        try (PreparedStatement statement = connection.prepareStatement("select id, name, price from ITEM order by id");
+        try (PreparedStatement statement = this.connection.prepareStatement("select id, name, price from ITEM order by id");
              ResultSet resultSet = statement.executeQuery()) {
 
             while (resultSet.next()) {
