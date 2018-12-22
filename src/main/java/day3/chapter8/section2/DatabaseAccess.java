@@ -1,23 +1,10 @@
 package day3.chapter8.section2;
 
-import java.sql.*;
+interface DatabaseAccess {
 
-abstract class DatabaseAccess {
-    protected Connection connection;
+    void init(String url, String user, String password);
 
-    private static final String url = "jdbc:h2:tcp://localhost/~/test";
-    private static final String user = "sa";
-    private static final String password = "";
+    void close();
 
-    DatabaseAccess() {
-        try {
-            connection = DriverManager.getConnection(url, user, password);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public abstract void selectAll();
-
-    public abstract void insert(int id, String name, int price);
+    void selectAll();
 }

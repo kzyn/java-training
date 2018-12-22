@@ -2,26 +2,23 @@ package day3.chapter8.section2;
 
 import java.sql.*;
 
-class ItemDao extends DatabaseAccess {
-    @Override
-    public void selectAll() {
-        try (PreparedStatement statement = connection.prepareStatement("select id, name, price from ITEM order by id");
-             ResultSet resultSet = statement.executeQuery()) {
+class ItemDao {
+    private H2Access h2Access = new H2Access();
 
-            while (resultSet.next()) {
-                System.out.println("id: " + resultSet.getInt("id"));
-                System.out.println("name: " + resultSet.getString("name"));
-                System.out.println("price: " + resultSet.getInt("price"));
-                System.out.println("---");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public void init(String url, String user, String password) {
+        this.h2Access.init(url, user, password);
     }
 
-    @Override
+    public void close() {
+        this.h2Access.close();
+    }
+
+    public void selectAll() {
+        this.h2Access.selectAll();
+    }
+
     public void insert(int id, String name, int price) {
-        try (PreparedStatement statement = connection.prepareStatement("insert into ITEM(id, name, price) values(?, ?, ?)")) {
+        try (PreparedStatement statement = this.h2Access.connection.prepareStatement("insert into ITEM(id, name, price) values(?, ?, ?)")) {
 
             statement.setInt(1, id);
             statement.setString(2, name);
