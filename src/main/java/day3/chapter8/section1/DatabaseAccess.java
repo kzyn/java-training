@@ -2,20 +2,12 @@ package day3.chapter8.section1;
 
 import java.sql.*;
 
-class DatabaseAccess {
+class DatabaseAccess implements AutoCloseable {
     private Connection connection;
 
     public void init(String url, String user, String password) {
         try {
             this.connection = DriverManager.getConnection(url, user, password);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void close() {
-        try {
-            this.connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -34,5 +26,10 @@ class DatabaseAccess {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void close() throws SQLException {
+        this.connection.close();
     }
 }
